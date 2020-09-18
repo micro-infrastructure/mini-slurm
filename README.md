@@ -8,7 +8,7 @@ Mini-SLURM is a slurm cluster in a VM. It sets up a VM on virtualbox and start s
 `apt-get install vagrant virtualbox git`
 - Clone the mini-slurm
 
-`git clone --branch 0.1.2 https://github.com/micro-infrastructure/mini-slurm.git`
+`git clone https://github.com/micro-infrastructure/mini-slurm.git`
 - Provision VM. 
 
 `cd mini-slurm`
