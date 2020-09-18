@@ -42,6 +42,6 @@
       name: slurm
       image: xenonmiddleware/slurm:17
       volumes:
-        - /mnt
+        - "/mnt:/mnt"
       ports:
         - "10022:22"
