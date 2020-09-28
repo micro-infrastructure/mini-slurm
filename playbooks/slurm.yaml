@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: slurm
+  namespace: process-slurm
+spec:
+  selector:
+    name: core-slurm
+  ports:
+  - port: 22
+    targetPort: 22
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: process-slurm
+  name: core-slurm
+  labels:
+    name: core-slurm
+spec:
+  hostname: slurm
+  containers:
+    - name: core-slurm
+      image: xenonmiddleware/slurm:17 
+      ports:
+        - containerPort: 22
+
